@@ -12,7 +12,7 @@ var links =
 
 
 var index = 0;
-var autoplay = false;
+var autoplay = true;
 var titles = [
               "NBA GOATs" ,
               "Michael Jordan 23 -- Greatest player of all time.God of basketball who is the greatest player ever in the NBA history.", 
@@ -26,7 +26,6 @@ function prevPic() {
   var img = document.getElementById("pic");
   index--;
   img.src = links[index % links.length];
-  //text.src = titles[index % titles.length];
   title.innerHTML = titles[index % links.length];
 }
 function nextPic() {
@@ -34,7 +33,6 @@ function nextPic() {
   var img = document.getElementById("pic");
   index++;
   img.src = links[index % links.length];
-  //text.src = titles[index % titles.length];
   title.innerHTML = titles[index % links.length];
   if(autoplay) {
     setTimeout(nextPic, 4200);   
